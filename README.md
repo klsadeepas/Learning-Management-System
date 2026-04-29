@@ -8,7 +8,7 @@ enables students, lecturers, and administrators to interact through a secure and
 - **User Authentication**: Register, Login, Forgot Password, JWT-based authentication
 - **Course Browsing**: Browse available courses with categories, search, filters, and course recommendations
 - **Course Enrollment**: Course level, Course duration, Learning category
-- **Learning Dashboard**: View enrolled courses, track learning progress, upcoming deadlines, and completed modules
+- **Learning Dashboard**: View enrolled courses, track learning progress, upcoming deadlines
 - **Assignments & Quiz Submission**: Submit assignments, attempt quizzes, and view submission history
 - **Student Profile Management**: Update personal details, change password, manage profile settings
 - **Learning Resources Access**: Download lecture notes, presentations, and study materials
