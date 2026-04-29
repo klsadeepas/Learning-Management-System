@@ -1,0 +1,368 @@
+:root {
+  --lasiru-primary: #12b981; 
+  --lasiru-primary-hover: #10b981;
+  --lasiru-text-dark: #111827;
+  --lasiru-text-muted: #6b7280;
+  --lasiru-border: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  background-color: #ffffff;
+}
+
+.lasiru-auth-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+.lasiru-auth-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.lasiru-auth-card.reverse {
+  direction: rtl;
+}
+.lasiru-auth-card.reverse > * {
+  direction: ltr;
+}
+
+.lasiru-auth-form-wrapper {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  overflow-y: auto;
+}
+
+.lasiru-auth-header {
+  width: 100%;
+  max-width: 440px;
+  margin-bottom: 2rem;
+}
+
+.lasiru-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.lasiru-logo-icon {
+  background: #0f766e;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lasiru-logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--lasiru-text-dark);
+}
+
+.lasiru-auth-header h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--lasiru-text-dark);
+  margin: 0 0 0.5rem;
+}
+
+.lasiru-auth-header p {
+  font-size: 0.95rem;
+  color: var(--lasiru-text-muted);
+  margin: 0;
+}
+
+.lasiru-auth-form-container {
+  width: 100%;
+  max-width: 440px;
+}
+
+.lasiru-auth-illustration {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: white;
+  text-align: center;
+}
+
+.lasiru-illustration-content {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lasiru-illustration-icon {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lasiru-illustration-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.lasiru-illustration-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Form inputs styling */
+.lasiru-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lasiru-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lasiru-field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--lasiru-text-dark);
+}
+
+.lasiru-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lasiru-input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #9ca3af;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.lasiru-field input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.85rem;
+  border: 1px solid var(--lasiru-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--lasiru-text-dark);
+  background: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.lasiru-field input:focus {
+  border-color: var(--lasiru-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.lasiru-field input::placeholder {
+  color: #9ca3af;
+}
+
+.lasiru-password-toggle {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.lasiru-password-toggle:hover {
+  color: #6b7280;
+}
+
+.lasiru-primary-btn {
+  background-color: var(--lasiru-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.lasiru-primary-btn:hover {
+  background-color: var(--lasiru-primary-hover);
+}
+
+.lasiru-primary-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.lasiru-switch-link {
+  text-align: center;
+  color: var(--lasiru-text-muted);
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.lasiru-switch-link a {
+  color: var(--lasiru-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.lasiru-switch-link a:hover {
+  text-decoration: underline;
+}
+
+/* Two column layout for form */
+.lasiru-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Quick Demo Access section in Login */
+.lasiru-login-extra {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.lasiru-login-extra h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.lasiru-login-extra p, 
+.lasiru-login-extra ul {
+  display: none;
+}
+
+/* For register role selector */
+.lasiru-role-heading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--lasiru-text-dark);
+  margin-bottom: -0.2rem;
+  margin-top: 0.5rem;
+}
+
+.lasiru-role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.lasiru-role-option {
+  border: 1px solid var(--lasiru-border);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: white;
+  text-align: left;
+}
+
+.lasiru-role-option.selected {
+  border-color: var(--lasiru-primary);
+  background: rgba(16, 185, 129, 0.05);
+  box-shadow: 0 0 0 1px var(--lasiru-primary);
+}
+
+.lasiru-role-option strong {
+  color: var(--lasiru-text-dark);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.lasiru-role-option span {
+  color: var(--lasiru-text-muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .lasiru-auth-card {
+    grid-template-columns: 1fr;
+  }
+  .lasiru-auth-illustration {
+    display: none;
+  }
+}
+.lasiru-back-home {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.lasiru-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.6rem 1rem;
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.04);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.lasiru-back-link:hover {
+  color: #0d9488;
+  background: white;
+  border-color: #0d9488;
+  transform: translateX(-4px);
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.15);
+}
+
+.lasiru-back-link svg {
+  transition: transform 0.3s ease;
+}
+
+.lasiru-back-link:hover svg {
+  transform: scale(1.2);
+}
